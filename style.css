@@ -86,7 +86,29 @@ hr {
 }
 
 .data-identitas {
-	padding: 5px;
+	width: 100%;
+	table-layout: fixed;
+	border-collapse: collapse;
+}
+
+.data-identitas td {
+	padding: 8px 6px;
+	vertical-align: top;
+	border-bottom: 1px solid var(--warna-border);
+	overflow-wrap: anywhere;
+}
+
+/* Kolom 1: label */
+.data-identitas td:nth-child(1) {
+	width: 190px;
+	font-weight: bold;
+	color: var(--warna-judul);
+}
+
+/* Kolom 2: titik dua */
+.data-identitas td:nth-child(2) {
+	width: 20px;
+	text-align: center;
 }
 
 .riwayat {
@@ -279,11 +301,10 @@ img {
 	}
 
 	/* Foto di atas, identitas di bawah */
-	.identitas,
-	.identitas tbody,
-	.identitas tr,
-	.kolom-foto,
-	.kolom-identitas {
+		.identitas,
+	.identitas > tbody,
+	.identitas > tbody > tr,
+	.identitas > tbody > tr > td {
 		display: block;
 		width: 100%;
 	}
@@ -325,5 +346,9 @@ img {
 	select,
 	textarea {
 		font-size: 16px;
+	}
+
+	.data-identitas td:nth-child(1) {
+		width: 110px;
 	}
 }
