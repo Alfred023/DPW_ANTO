@@ -68,9 +68,11 @@ hr {
 /* Identitas */
 .identitas {
 	width: 100%;
+	table-layout: fixed;
 }
 
 .kolom-foto {
+	width: 240px;
 	vertical-align: top;
 	padding-right: 30px;
 }
@@ -81,6 +83,8 @@ hr {
 
 .foto-profil {
 	width: 190px;
+	max-width: none;
+	height: auto;
 	border: 5px solid var(--warna-aksen);
 	padding: 5px;
 }
@@ -94,7 +98,6 @@ hr {
 .data-identitas td {
 	padding: 8px 6px;
 	vertical-align: top;
-	border-bottom: 1px solid var(--warna-border);
 	overflow-wrap: anywhere;
 }
 
