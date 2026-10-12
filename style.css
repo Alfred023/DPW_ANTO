@@ -232,40 +232,98 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
+/* ===== Tampilan responsif ===== */
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.container {
+	box-sizing: border-box;
+	max-width: 1000px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+	.container {
+		width: 90%;
+		padding: 20px;
+	}
+
+	.grid-informasi {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+/* HP */
 @media (max-width: 768px) {
-    .container: {
-        width: 94%;
-        margin: 10px auto;
-        padding: 15px;
-    } 
+	body {
+		margin: 0;
+	}
 
-    h1 {font-size: 24px}
-    h2 {font-size: 19px}
-    p {font-size: 14px; line-height: 1.6;}
+	.container {
+		width: 100%;
+		margin: 0;
+		padding: 15px;
+		border-width: 4px;
+		outline: none;
+	}
 
-    .identitas > tbody > tr {
-        display: flex;
-        flex-direction: column;
-    }
+	h1 { font-size: 24px; }
+	h2 { font-size: 19px; }
 
-    .kolom-foto {
-        width: 100%;
-        padding-right: 0;
-        text-align: center;
-        margin-bottom: 20px;
-    }
+	p {
+		font-size: 14px;
+		line-height: 1.6;
+		text-align: left;
+	}
 
-    .kolom-identitas {
-        width: 100%;
-        padding-right: 0;
-    }
+	/* Foto di atas, identitas di bawah */
+	.identitas,
+	.identitas tbody,
+	.identitas tr,
+	.kolom-foto,
+	.kolom-identitas {
+		display: block;
+		width: 100%;
+	}
 
-    .kolom-identitas h2 {
-        margin-top: 0;
-        text-align: center;
-    }
+	.kolom-foto {
+		text-align: center;
+		padding-right: 0;
+		margin-bottom: 20px;
+	}
 
-    .foto-profil {
-        width: 130%;
-    }
+	.kolom-identitas h2 {
+		margin-top: 0;
+		text-align: center;
+	}
+
+	.foto-profil {
+		width: 150px;
+	}
+
+	/* Kartu jadi 1 kolom */
+	.grid-informasi {
+		grid-template-columns: 1fr;
+	}
+
+	/* Tabel mata kuliah bisa digeser */
+	.tabel-matakulia {
+		display: block;
+		overflow-x: auto;
+		font-size: 13px;
+	}
+
+	/* Tombol selebar layar */
+	button {
+		width: 100%;
+		margin: 0 0 10px 0;
+	}
+
+	input,
+	select,
+	textarea {
+		font-size: 16px;
+	}
 }
